@@ -111,8 +111,11 @@ function runGame() {
         
         if (winner.length) {
             showWinPieces(winner);
-            changeLosePieces();
-            showNewGame();
+            endGame();
+            return;
+        }
+        if (piecesAdded['red'].length + piecesAdded['yellow'].length == 42) {
+            endGame();
         }
     }
 
@@ -131,6 +134,11 @@ function runGame() {
             square.classList.add('lose-square','disabled');
             square.onclick = false;
         });
+    }
+
+    function endGame() {
+        changeLosePieces();
+        showNewGame();
     }
 
     function showNewGame() {
