@@ -1,5 +1,5 @@
 # 4-en-linea / Connect 4
-## Game project
+## Game project connect 4 for Desktop
 
 ### Developer: Javier Basualdo
 
